@@ -12,7 +12,8 @@
         <input type="text" id="status" class="form-control" v-model="data.status" required />
       </div>
 
-      <button type="submit" class="btn btn-success w-100">UPDATE</button>
+      <button type="submit" class="btn btn-success w-100 mb-2">UPDATE</button>
+      <button type="button" @click="backBtn()" class="btn btn-danger w-100">BACK</button>
     </form>
   </div>
 </template>
@@ -39,6 +40,9 @@ export default {
     this.getData(this.$route.params.id)
   },
   methods: {
+    backBtn(){
+      this.$router.push('/');
+    },
     getData(id) {
       axios
         .get(`http://127.0.0.1:8000/api/${id}/edit`)

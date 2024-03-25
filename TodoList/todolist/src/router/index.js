@@ -1,6 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
-import edit from '../components/edit.vue'
+import edit from '../components/edit-todo.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -16,7 +16,7 @@ const router = createRouter({
       component: () => import('../components/HelloWorld.vue')
     },
     {
-      path: '/:id/edit',
+      path: '/:id/edit-todo',
       name: 'edit',
       component: edit
     }

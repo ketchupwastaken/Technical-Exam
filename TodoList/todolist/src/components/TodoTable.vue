@@ -23,7 +23,7 @@ import 'bootstrap-icons/font/bootstrap-icons.css'
                 <td>{{ format_date(item.created_at) }}</td>
                 <td>{{ format_date(item.updated_at) }}</td>
                 <td>
-                    <RouterLink :to="{path: item.id+'/edit'}">
+                    <RouterLink :to="{path: item.id+'/edit-todo'}">
                         <button class="btn btn-primary"><i class="bi bi-pencil"></i></button>
                     </RouterLink>
                 

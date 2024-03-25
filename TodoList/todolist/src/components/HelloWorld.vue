@@ -12,7 +12,8 @@
         <input type="text" id="status" class="form-control" v-model="data.status" required />
       </div>
 
-      <button type="submit" class="btn btn-success w-100">SAVE</button>
+      <button type="submit" class="btn btn-success w-100 mb-2">SAVE</button>
+      <button type="button" @click="backBtn()" class="btn btn-danger w-100">BACK</button>
     </form>
   </div>
 </template>
@@ -34,6 +35,9 @@
       }
     },
     methods: {
+      backBtn(){
+        this.$router.push('/');
+      },
       addTodo() {
         const jsonData = JSON.stringify(this.data)
 
